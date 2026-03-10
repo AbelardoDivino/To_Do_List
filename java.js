@@ -2,6 +2,8 @@ let botao = document.getElementById("add")
 let receberdados = document.querySelector(".receber")
 let tarefa = document.getElementById("tarefa")
 
+let removerbtn = document.getElementById("remover")
+
 botao.addEventListener("click",()=>{
 
     let texto = tarefa.value
@@ -18,5 +20,20 @@ botao.addEventListener("click",()=>{
     receberdados.appendChild(tarefar)
 
     tarefa.value = ""
+
+    // tarefar.addEventListener("click",()=>{
+    //     tarefar.remove()
+    // })
+
+
+
+})
+removerbtn.addEventListener("click",()=>{
+
+let ultimatarefa  = receberdados.lastElementChild
+
+if (ultimatarefa) {
+    ultimatarefa.remove()
+}
 
 })
