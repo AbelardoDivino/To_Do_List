@@ -1,18 +1,21 @@
 let botao = document.getElementById("add")
 let receberdados = document.querySelector(".receber")
 let tarefa = document.getElementById("tarefa")
+let favoritar = document.getElementById("favoritar")
 
 let removerbtn = document.getElementById("remover")
 
 botao.addEventListener("click",()=>{
 
     let texto = tarefa.value
+    
 
     if (texto === "") {
         alert("digite uma tarefa")
         return
     }
 
+    
     let tarefar = document.createElement("div")
 
     tarefar.textContent = texto
@@ -37,3 +40,12 @@ if (ultimatarefa) {
 }
 
 })
+
+favoritar.addEventListener("click",()=>{
+    let favorito = receberdados.lastElementChild
+
+    if (favorito) {
+        favorito.classList.toggle("favorita")
+    }
+})
+
