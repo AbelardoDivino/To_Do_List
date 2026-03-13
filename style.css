@@ -1,71 +1,119 @@
- *{
-    margin: 0;
-    padding: 0;
-    text-align: justify;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 
 body{
-        background:#f4f6f9;
-
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 header{
-width: auto;
-height: 45px;
-background-color: gray;
-    color:black;
-    padding:15px;
-    text-align:center;
-
-}
-
-header h1{
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-button{
-    width: auto;
-    height: 30px;
+    margin-top:30px;
+    color:white;
 }
 
 .container{
-  max-width:600px;
-    margin:40px auto;
     background:white;
-    padding:25px;
+    width:420px;
+    margin-top:30px;
     border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-.receber{
-    height: auto;
-    width: 200px;
-    border: 1px solid black;
+.entrar_dados{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.entrar_dados input{
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.entrar_dados button{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#4facfe;
+    color:white;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.entrar_dados button:hover{
+    background:#3b8ce0;
 }
 
 .iraaparecer{
-    display: flex;
-    margin: 10px;
-    gap: 10px;
+    margin-top:20px;
 }
 
-.todas{
-    display: flex;
+#todas, #favoritas, #feitas{
+    display:inline-block;
+    margin-right:10px;
+    padding:6px 10px;
+    background:#eee;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.iraaparecer > div:hover{
+    background:#ddd;
+}
+
+.receber{
+    margin-top:15px;
+}
+
+.receber div{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    margin-top:8px;
+    background:#f5f5f5;
+    border-radius:6px;
+    transition:0.2s;
+}
+
+.receber div:hover{
+    background:#e9e9e9;
+}
+
+.texto{
+    flex:1;
+}
+
+.receber button{
+    margin-left:5px;
+    border:none;
+    background:none;
+    font-size:16px;
+    cursor:pointer;
 }
 
 .favorita{
-    background-color: green;
+    background:#fff8d6;
 }
-.tarefa{
-    display: grid;
-    justify-content: center;
 
-} 
+.concluida .texto{
+    text-decoration:line-through;
+    color:gray;
+}
 
-/* .feito{
-    background-color: aqua;
-} */
+footer{
+    margin-top:30px;
+    color:white;
+}
